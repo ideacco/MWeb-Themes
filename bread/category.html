@@ -1,0 +1,63 @@
+<!-- 这里是category的开始 -->
+<main class="col-md-8 main-content">
+	{% for p in posts %}
+	<article class="post">
+
+		<!-- cat的头部 -->
+		 <header class="post-head">
+		  	<h1 class="post-title"><a href="{{ p.url }}">{{ p.title }}</a></h1>
+			 <div class="post-meta">
+			  	<span class="">
+			  	<time datetime="{{ p.dateGTM }}" pubdate data-updated="true">{{ p.date }}</time>
+			  	</span>			  	
+			 </div>		
+		 </header>
+
+
+		<!-- cat的正文 -->
+	  	<div class="post-content">		  	
+		  	{{ p.desContent }}
+		</div>
+
+		<!-- cat的脚 -->
+		{% if p.readMore.length %} 	
+		<footer class="post-footer clearfix">
+
+		<div class="pull-left tag-list">
+            <i class="fa fa-folder-open-o"></i>
+            <a rel="full-article" href="{{ p.url }}#more">read more &rarr;</a>
+        </div>
+        <div class="pull-right share">
+        </div>
+    	</footer>
+    	{% /if %}
+
+	</article>
+ 	{% /for %} 
+	<!-- 翻页导航条 -->
+	
+	<!-- <nav class="pagination" role="navigation">
+		{% if nextPageUrl.length %} <a class="prev" href="{{ nextPageUrl }}">&larr; Older</a> {% /if %}
+	<a href="archives.html">Blog Archives</a>
+		{% if prevPageUrl.length %} <a class="next" href="{{ prevPageUrl }}">Newer &rarr;</a> {% /if %} 	    
+	</nav> -->
+
+		<nav>
+            <ul class="pager">
+            {% if prevPageUrl.length %}
+            	<li class=""><a href="{{ prevPageUrl }}"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+            {% else %}
+            	<li class="  disabled "><a href="#index"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+            {% /if %}
+
+				<li class=""><a href="archives.html">归档</a></li>
+
+			{% if nextPageUrl.length %}
+			<li class=""><a href="{{ nextPageUrl }}">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+			{% else %}
+            	<li class=" disabled "><a href="#index">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+            {% /if %}
+            </ul>
+          </nav>
+
+</main>

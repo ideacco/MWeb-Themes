@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>
+    {% if pageTitle.length %}  
+    {{ pageTitle }}
+    {% else %}
+    {{ siteName }}
+    {% /if %}
+    </title>
+
+
+
+
+  <link rel="stylesheet" href="asset/css/screen.css" media="screen, projection" type="text/css">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="asset/css/font-awesome.css">
+
+
+  
+
+
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/solarized_light.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  </head>
+
+  <!-- 主体开始 -->
+  <body class="home-template" data-feedly-mini="yes" style="background: #ebebeb;">
+
+    <!-- 头部位置 -->
+    <header class="main-header"  style="background-image: url(asset/img/Tables4.jpg)""> 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <!-- logo 的位置 -->
+            <a class="branding" href="#" title="一个未知标题位置"><img src="asset/img/K-logo.png" alt="Ghost 开源博客平台" data-pin-nopin="true"></a>
+            <h4 class="text-hide">{{ siteDes }}</h4>
+            <!-- logo and -->
+          </div>
+        </div>
+      </div>
+    </header>
+  <!-- 头部结束 -->
+
+  <!-- 自定义样式 -->
+
+
+
+  <!-- 复制导航条 -->
+  <nav class="main-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">文字标题</span>
+                        <i class="fa fa-bars"></i>
+                        </span>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-menu">
+                      <ul class="menu">
+
+                        {% for m in siteMenu %}
+                        <li role="presentation">
+                        <a href="{{ m.url }}">{{ m.name }}<span class="sr-only"></span></a>
+                        </li>
+                        {% /for %}
+
+                        <li class="text-hide" role="presentation"><a href="/about/">关于</a></li>
+                      </ul>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 导航条实例结束 -->
+
+
+<section class="content-wrap">
+<div class="container">
+  <div class="row">

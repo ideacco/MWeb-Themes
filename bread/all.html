@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>
+  {% if pageTitle.length %}  
+  {{ pageTitle }}
+  {% else %}
+  {{ siteName }}
+  {% /if %}
+
+  </title>
+  <meta name="author" content="">
+  <meta name="description" content="{{ siteDes }}">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="asset/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="atom.xml" rel="alternate" title="{{ siteName }}" type="application/atom+xml">
+  <script src="asset/js/modernizr-2.0.js"></script>
+  <script src="asset/js/jquery.min.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/solarized_light.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <style type="text/css">
+  .cat-children-p{ padding: 6px 0px;}
+  .hljs{background: none;}
+  </style>
+  <script type="text/javascript">
+  var isAddSildbar = true;
+  </script>
+  <script src="asset/js/octopress.js" type="text/javascript"></script>
+</head>
+<script type="text/javascript">
+//链接新开窗口
+function addBlankTargetForLinks () {
+  $('a[href^="http"]').each(function(){
+      $(this).attr('target', '_blank');
+  });
+}
+$(document).ready(function(event) {
+  addBlankTargetForLinks();
+});
+</script>
+<body>
+ 
+  <header role="banner">
+    <hgroup>
+      <h1><a href="index.html">{{ siteName }}</a></h1>  
+      
+      <h2>{{ siteDes }}</h2>
+      </hgroup>
+    </header>
+
+  <nav role="navigation">
+
+    <ul class="subscription" data-subscription="rss">
+      <li>
+       <a href="atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
+    </li>
+    </ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:{{ siteDomain }}" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+{% for m in siteMenu %}
+  <li id="{{ m.className }}"><a target="{{ m.target }}" href="{{ m.url }}">{{ m.name }}</a></li>
+{% /for %}
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+    <!-- post 开始 -->
+
+
+<div>
+  <article class="hentry" role="article">
+  <header>
+          <h1 class="entry-title">{{post.title}}</h1>
+        <p class="meta"><time datetime="{{post.dateGTM}}" pubdate data-updated="true">{{post.date}}</time></p>
+       </header>
+        <div class="entry-content">
+          {{ post.content }}
+      </div>
+
+    
+    
+    <footer>
+     <p class="meta">
+
+      {% if post.cats.@count %}<strong>Categories:</strong>&nbsp; {% /if %}
+      <span class="categories">
+      {% for cat in post.cats %}
+          <a class='category' href='{{ cat.url }}'>{{ cat.name }}</a>&nbsp;
+      {% /for %} 
+      </span>
+        </p>
+        <p class="meta">
+          
+     </p>
+      
+    <div class="sharing">
+      {{ commentAndShareCode }}
+          {% if ext_disqus_shortname.length %}
+            <div id="disqus_thread"></div>
+          {% /if %}
+
+          {% if ext_duoshuo_shortname.length %}
+              <div class="ds-thread" data-thread-key="{{post.url}}" data-url="{{ siteURL }}{{post.url}}" data-title="{{post.title}}"></div>
+          {% /if %}
+
+    </div>
+
+      <p class="meta">
+      {% if postNav.prev %}
+          <a class="basic-alignment left" href="{{ postNav.prev.url }}" 
+          title="Previous Post: {{ postNav.prev.title }}">&laquo; {{ postNav.prev.title }}</a>
+      {% /if %}
+      {% if postNav.next %}
+          <a class="basic-alignment right" href="{{ postNav.next.url }}" 
+          title="Next Post: {{ postNav.next.title }}">{{ postNav.next.title }} &raquo;</a>
+      {% /if %}
+      </p>
+    </footer>
+  </article>
+</div>
+<!-- 侧边栏开始 -->
+<aside class="sidebar"> 
+
+  <section>
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+    {% for p in categoriesTree %}
+        <li class="post">
+          <a href="{{ p.url }}"><strong>{{ p.name }}&nbsp;({{ p.count }})</strong></a>
+          {% if p.children.@count %} <p class="cat-children-p"> {% /if %}
+          {% for p2 in p.children %}
+            <a href="{{ p2.url }}">{{ p2.name }}&nbsp;({{ p2.count }})</a>&nbsp;&nbsp;
+          {% /for %}
+          {% if p.children.@count %} </p> {% /if %}
+        </li>
+    {% /for %} 
+    </ul>
+  </section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+    {% for p in recentPosts %}
+        {% if currentLoop.currentIndex < 5 %}
+          <li class="post">
+            <a href="{{ p.url }}">{{ p.title }}</a>
+          </li>
+       {% /if %}
+    {% /for %} 
+    </ul>
+  </section>
+  
+</aside>
+<!-- footer 开始 -->
+
+</div></div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 -  -
+  <span class="credit">Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; Theme by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+
+{% if ext_disqus_shortname.length %}
+<script type="text/javascript">
+    var disqus_shortname = '{{ ext_disqus_shortname }}'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = '{{ ext_disqus_shortname }}'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+{% /if %}  
+{% if ext_duoshuo_shortname.length %}
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:'{{ ext_duoshuo_shortname }}'};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+{% /if %}    
+
+{{ seqAndFlowChartSupport }}
+{{ mathJaxSupport }}
+{{ siteOther }}
+</body>
+</html>
