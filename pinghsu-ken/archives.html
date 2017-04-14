@@ -1,0 +1,43 @@
+<!-- archives 开始 -->
+<div class="main-content archive-page clearfix" style="padding-bottom: 80px">
+    <div class="categorys-item">
+
+{% for c in categoriesTree %}
+
+        <div class="categorys-title">
+    			<a href="{{ c.url }}">{{ c.name }}</a>
+		<div class="post-lists">
+		        {% for p2 in c.posts %}
+
+			<div class="post-lists-body">
+				<div class="post-list-item">
+					<div class="post-list-item-container">
+						<div class="item-label">
+								<div class="item-title">
+								<a href="{{ p2.title }}">{{ p2.title }}</a>
+								</div>
+							<div class="item-meta clearfix">
+								<div class="item-meta-ico bg-ico-game" style="background: url(asset/img/bg-ico.png)no-repeat;background-size: 40px auto;">
+								</div>
+								<div class="item-meta-date"> 
+
+									<time datetime="{{ p2.dateGTM }}" pubdate>
+									<span class='year'>{{ p2.dateYear }}</span>
+									<span class='month'>{{ p2.dateMonth }}</span> 
+									<span class='day'>{{ p2.dateDay }}</span> 
+									</time>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% /for %} 
+		</div>
+	</div>
+{% /for %} 
+</div>
+</div>
+
+<!-- 导航 -->	
+<!-- <div class="lists-navigator clearfix"></div> -->
