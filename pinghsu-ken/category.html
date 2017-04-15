@@ -6,7 +6,7 @@
 				<div class="post-list-item">
 					<div class="post-list-item-container">
 
- <!-- 自定背景图 -->
+ <!-- 自定post背景图 -->
 					 {% if p.ext_small_image.length %}
 						<div class="item-thumb bg-deepgrey" style="background-image:url({{ p.ext_small_image }});">
 						{% else %}
@@ -18,7 +18,14 @@
 								<p>{{ p.desContentTextOnly }}</p> 
 							</div> 
 						</a> 
+
+<!-- 自定义Post颜色 -->
+				{% if p.ext_colour.length %} 
+						<div class="item-slant reverse-slant bg-{{ p.ext_colour }}"></div>
+						{% else %}
 						<div class="item-slant reverse-slant bg-deepgrey"></div>
+						{% /if %}
+
 						<div class="item-slant"></div>
 		 				<div class="item-label">
 	  						<div class="item-title">
@@ -26,7 +33,7 @@
 	  						</div>
 		   					<div class="item-meta clearfix"> 
 
-<!-- 判断Icon -->
+<!-- 自定义Icon -->
 								{% if p.ext_icon.length %} 
 								<div class="item-meta-ico bg-ico-{{ p.ext_icon }}" style="background: url(asset/img/bg-ico.png) no-repeat;background-size: 40px auto;">
 								</div>
