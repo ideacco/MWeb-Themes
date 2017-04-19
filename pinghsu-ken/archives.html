@@ -19,6 +19,8 @@
 					{% /if %}
 							<div class="item-title">
 							<a href="{{ p.url }}">{{ p.title }}</a>
+
+
 							</div>
 							<div class="item-meta clearfix">
 <!-- 自定义icon -->
@@ -39,9 +41,12 @@
 					</div>
 				</div>
 			</div>
+			 {% if c.children.@count %} 有子分类 {% /if %}
+
             {% /for %}
 			{% for c2 in c.children %}
 <!-- 这里可以插入二级目录名字及链接 -->
+
             {% for p in c2.posts %}
 				<div class="post-list-item">
 <!-- 自定义颜色 -->
