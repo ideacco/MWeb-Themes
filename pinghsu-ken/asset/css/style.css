@@ -185,7 +185,7 @@ input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#5f5f5f;}
 .post-data,.post-data a{font-size:12px;color:#5f5f5f;}
 .post-tags{margin:0;padding:5px 0 15px;border-bottom:1px solid #e0e0e0;}
 .post-tags a{font-size:13px;font-weight:600;display:inline-block;margin:4px 8px 0 0;padding:0 15px;-webkit-transition-duration:400ms;transition-duration:400ms;text-decoration:none!important;letter-spacing:0;}
-.post-tags a:nth-child(1n){color:#fff;border:1px solid #778CA1;border-radius:15px;background:#778CA1;}
+.post-tags a:nth-child(1n){color:#fff;border:1px solid #6fa3ef;border-radius:15px;background:#6fa3ef;}
 .post-tags a:nth-child(2n){color:#fff;border:1px solid #ff9800;border-radius:15px;background:#ff9800;}
 .post-tags a:nth-child(3n){color:#fff;border:1px solid #46c47c;border-radius:15px;background:#46c47c;}
 .post-tags a:nth-child(4n){color:#fff;border:1px solid #f9bb3c;border-radius:15px;background:#f9bb3c;}
