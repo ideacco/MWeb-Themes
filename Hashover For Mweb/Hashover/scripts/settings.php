@@ -35,7 +35,7 @@ class Settings
 
 	// Primary settings
 	public $language		= 'zh-cn';			// UI language, for example 'en', 'de', etc. 'auto' to use system locale
-	public $theme			= 'idken';			// Comment Cascading Style Sheet (CSS)
+	public $theme			= 'idken2';			// Comment Cascading Style Sheet (CSS)
 	public $usesModeration		= false;			// Whether comments must be approved before they appear to other visitors
 	public $dataFormat		= 'xml';			// Format comments will be stored in; options: xml, json, sql
 	public $defaultName		= 'Anonymous';			// Default name to use when one isn't given

@@ -47,10 +47,15 @@ Copyright (C) 2016-2017 Jacob Barkdull
    #comments End
    ========================================================================== */
 
-/*#hashover .hashover-comment >.hashover-reply:last-child {
-	border: 0px solid: #0f0f0f;
+.hashover-comment.hashover-reply>#lines{
+	margin-bottom: 35px;
+	margin-top: 10px;
+	width:100%;
+	height:1px; 
+	background:#f0f0f0;
+	overflow:hidden;
+}
 
-}*/
 #hashover #hashover-form .hashover-inputs >.hashover-input-cell{
 	margin-top: 8px;
 	float: left;
@@ -61,17 +66,15 @@ Copyright (C) 2016-2017 Jacob Barkdull
 }
 
 #hashover-main-comment.hashover-textarea.hashover-main-textarea{
-
-margin-top: 0px;
-
+	margin-top: 0px;
 }
 
 #nodege-all.hashover-comment.hashover-reply.hashover-user-owned{
-margin:5px;
-border:0px;
-border-radius:3px;
-background:#fff;
-box-shadow:0 0px 0px rgba(0,0,0,);
+	margin:5px;
+	border:0px;
+	border-radius:3px;
+	background:#fff;
+	box-shadow:0 0px 0px rgba(0,0,0,);
 }
 
 #nodege .hashover-content:after {
@@ -82,31 +85,31 @@ box-shadow:0 0px 0px rgba(0,0,0,);
 
 
 #nodege .hashover-balloon {
-margin:0px 0px 8px 0px;
-border:0px;
-border-radius:3px;
-background:#fff;
-box-shadow:0 0px 0px rgba(0,0,0,);
+	margin:0px 0px 8px 0px;
+	border:0px;
+	border-radius:3px;
+	background:#fff;
+	box-shadow:0 0px 0px rgba(0,0,0,);
 }
 
 
 
 #hashover-more-section.hashover-comment.hashover-user-owned {
-margin:30px 0px 0px 0px;
-border:1px solid rgba(184,197,214,.2);
-border-radius:3px;
-background:#fff;
--webkit-box-shadow:0 1px 4px rgba(0,0,0,.04);
-box-shadow:0 1px 4px rgba(0,0,0,.04);
+	margin:30px 0px 0px 0px;
+	border:1px solid rgba(184,197,214,.2);
+	border-radius:3px;
+	background:#fff;
+	-webkit-box-shadow:0 1px 4px rgba(0,0,0,.04);
+	box-shadow:0 1px 4px rgba(0,0,0,.04);
 }
 
 
 #hashover-sort-div .hashover-comment.hashover-reply.hashover-user-owned {
-margin:0px 0px 0px 0px;
-border:0px;
-border-radius:3px;
-background:#fff;
-box-shadow:0 0px 0px rgba(0,0,0,);
+	margin:0px 0px 0px 0px;
+	border:0px;
+	border-radius:3px;
+	background:#fff;
+	box-shadow:0 0px 0px rgba(0,0,0,);
 }
 
 #hashover .hashover-comment .hashover-balloon :after {
@@ -118,9 +121,7 @@ box-shadow:0 0px 0px rgba(0,0,0,);
 
 
 .hashover-comment {
-
-padding:20px;cursor:pointer;
-
+	padding:20px;cursor:pointer;
 }
 
 #hashover .hashover-avatar-image,
@@ -135,17 +136,13 @@ padding:20px;cursor:pointer;
 	cursor:pointer;
 }
 
-
-
 #hashover .hashover-inputs,
-#hashover .hashover-inputs input
-{
-margin:0px; 
-
+#hashover .hashover-inputs input {
+	margin:0px; 
 }
+
 #hashover #hashover-end-links,
-#hashover #hashover-sort
-{
+#hashover #hashover-sort {
 	display: none;
 }
 
@@ -163,6 +160,7 @@ margin:0px;
 
 	margin: 0px 0px 5px 0px;
 }
+
 .hashover-textarea.hashover-reply-textarea {
 	overflow: hidden;
 	margin-top: 40px;
@@ -171,8 +169,6 @@ margin:0px;
 #span.hashover-avatar {
 	float: left;
 }
-
-
 
 #hashover-sort-div .hashover-thread-link {
 	padding-right: 0px;
@@ -186,10 +182,7 @@ margin:0px;
 
 #hashover-sort-div .hashover-comment.hashover-reply {
 	padding-left: 0px;padding-right: 0px;
-	border: 1px solid: #0f0f0f;
 }
-
-/*test*/
 
 
 #hashover {
@@ -253,12 +246,11 @@ margin:0px;
 
 #hashover .hashover-comment {
 	position:relative;
-	padding:15px 8px;
 	border-radius:3px;
 	background:#fff;
 	overflow: auto;
 	margin-bottom: 0px;
-	margin-top: 40px;
+	margin-top: 30px;
 
 }
 
@@ -453,8 +445,8 @@ box-shadow:0 1px 4px rgba(0,0,0,.04);
 }
 
 #hashover .hashover-reply-form {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 50px;
+	margin-bottom: 5px;
 	margin-left: 0px;
 	margin-right: 0px;
 	position: relative;
@@ -1064,12 +1056,12 @@ margin:17px 17px 0px 17px;
 #hashover .hashover-comment .hashover-date-permalink,
 #hashover .hashover-comment .hashover-date-permalink:visited,
 #hashover .hashover-comment .hashover-date > * {
-	color: #606060;
+	color: #aaaaaa;
 }
 
 #hashover .hashover-comment .hashover-date-permalink:hover,
 #hashover .hashover-comment .hashover-date-permalink:active {
-	color: #101010;
+	color: #aaaaaa;
 }
 
 #hashover .hashover-comment .hashover-date-permalink,
