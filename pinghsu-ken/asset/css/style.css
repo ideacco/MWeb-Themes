@@ -35,7 +35,7 @@ pre code{font-size:13px;display:block;overflow:auto;padding:1.3em;border:0;}
 blockquote{padding:0 10px 0 20px;border-left:4px solid #ddd;}
 blockquote>:first-child{margin-top:0;}
 blockquote>:last-child{margin-bottom:0;}
-hr{clear:both;overflow:hidden;height:0;margin:15px 0;padding:0;border:0;border-bottom:2px solid #ddd;background:transparent;}
+hr{clear:both;overflow:hidden;height:0;margin:15px 0;padding:0;border:0;border-bottom:1px solid #e0e0e0;background:transparent;}
 table{font-size:13px;display:block;overflow:auto;width:100%;border-spacing:0;border-collapse:collapse;word-wrap:normal;word-break:normal;}
 table th{font-weight:bold;}
 table th,table td{padding:6px 13px;white-space:nowrap;border:1px solid #ddd;}
