@@ -10,13 +10,9 @@
 			<div class="post-lists-body">
 				<div class="post-list-item">
 <!-- 自定义颜色 -->
-				{% if p.ext_colour.length %} 
-				<div class="post-list-item-container bg-{{ p.ext_colour }}">
-				<div class="item-label bg-{{ p.ext_colour }}">
-					{% else %}
+				
 					<div class="post-list-item-container">
 						<div class="item-label">
-					{% /if %}
 							<div class="item-title">
 							<a href="{{ p.url }}">{{ p.title }}</a>
 
