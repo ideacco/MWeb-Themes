@@ -28,14 +28,14 @@
 class Settings
 {
 	// Required setup
-	public    $notificationEmail	= 'ken@79smart.com';	// E-mail for notification of new comments
-	protected $encryptionKey	= 'roses8497';			// Unique encryption key
+	public    $notificationEmail	= 'your@email.com';	// E-mail for notification of new comments
+	protected $encryptionKey	= 'yours1234';			// Unique encryption key
 	protected $adminName		= 'admin';			// Login name to gain admin rights (case-sensitive)
 	protected $adminPassword	= '123456';			// Login password to gain admin rights (case-sensitive)
 
 	// Primary settings
 	public $language		= 'zh-cn';			// UI language, for example 'en', 'de', etc. 'auto' to use system locale
-	public $theme			= 'idken2';			// Comment Cascading Style Sheet (CSS)
+	public $theme			= 'idken';			// Comment Cascading Style Sheet (CSS)
 	public $usesModeration		= false;			// Whether comments must be approved before they appear to other visitors
 	public $dataFormat		= 'xml';			// Format comments will be stored in; options: xml, json, sql
 	public $defaultName		= 'Anonymous';			// Default name to use when one isn't given
