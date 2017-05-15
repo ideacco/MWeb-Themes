@@ -2,13 +2,14 @@
 基于Mweb+ 驱动创建的模板样式。
 
 ---
-#Bread 模板介绍
-Bread is MWeb-Themes。
-面包是一个Mweb的模板，基于Bootstrap的开源框架搭建，当然，参考了经典博客模板。
+## BMWEB 模板介绍
+### Bread is MWeb-Themes。
+面包是一个Mweb的模板，基于Bootstrap的开源框架搭建，当然，参考了经典博客模板。适合项目文档发布，项目跟进等。
+
+### pinghsu-ken
+pinghsu-ken是基于pinghsu模板的MWEB移植模板。适合项目文档管理，也非常适合做个人博客，并且搭载了开源评论系统hashover。
+
 ---
-
-2017年04月12日00:28:11
-
 
 pinghsu-ken是基于pinghsu模板的MWEB移植模板，拥有pinghsu模板的大部分功能，包括：
 
