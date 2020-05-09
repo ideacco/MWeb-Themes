@@ -49,9 +49,14 @@ post icon 文章个性徽标
 post colour 文章标题颜色
 ```
 
-### 更多预览
+### Myidea主题的更多预览
+根据标签分类：可以检索文件夹内的子文件名称，以文件夹名称分类。
 ![image](https://github.com/ideacco/MWeb-Themes/blob/master/document/myidea2.png)
+
+翻页按钮以文章名称命名，并且增加了版权说明
 ![image](https://github.com/ideacco/MWeb-Themes/blob/master/document/myidea3.png)
+
+正文增加了右侧的悬浮文章导航条
 ![image](https://github.com/ideacco/MWeb-Themes/blob/master/document/myidea4.png)
 
 
