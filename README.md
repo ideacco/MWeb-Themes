@@ -32,7 +32,7 @@ Myidea是基于pinghsu模板的MWEB移植模板，拥有pinghsu模板的大部�
 
 1. 首先下载模板文件到电脑上，并且把文件放到模板文件夹中。
 ps：在Mweb中左侧的文件夹上点击右键，并且选择编辑--在弹出的窗口中选择--在Finder中打开。
-2. 在Mweb中使用Myidea这个模板。
+2. 在Mweb中使用（选择）Myidea这个模板。
 3. 在高级设置中---网站扩展中导入import/Site Extension
 4. 在高级设置中---文章扩展中导入import/Document Extension
 5. 在文章中设置，使用相应的变量就可以啦。
