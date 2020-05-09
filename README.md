@@ -9,7 +9,7 @@
 
 
 ## Myidea 模板
-![image](https://github.com/ideacco/MWeb-Themes/blob/master/document/myidea1.png)
+![image](https://github.com/ideacco/MWeb-Themes/blob/master/document/myidea.jpg)
 
 idea是基于pinghsu模板的MWEB移植模板。适合项目文档管理，也非常适合做个人博客，并且搭载了开源评论系统hashover。
 
