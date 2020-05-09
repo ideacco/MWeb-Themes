@@ -1,0 +1,36 @@
+[
+{
+    "title": "Author-作者",
+    "variableName": "author",
+    "inputFieldHeight": 22,
+    "exampleText": "作者名字显示",
+    "isThemeExtension": 0
+},
+{
+    "title": "back-image",
+    "variableName": "bgimg",
+    "inputFieldHeight": 22,
+    "exampleText": "The default background-image",
+    "isThemeExtension": 0
+},
+{
+    "title": "logo path",
+    "variableName": "logo_path",
+    "inputFieldHeight": 22,
+    "exampleText": "240x240",
+    "isThemeExtension": 0
+},
+{
+    "title": "disqus",
+    "variableName": "disqus_shortname",
+    "inputFieldHeight": 22,
+    "exampleText": "disqus shortname",
+    "isThemeExtension": 0
+},
+{
+    "title": "duoshuo ",
+    "variableName": "duoshuo_shortname",
+    "inputFieldHeight": 22,
+    "exampleText": "duoshuo shortname",
+    "isThemeExtension": 0
+}]

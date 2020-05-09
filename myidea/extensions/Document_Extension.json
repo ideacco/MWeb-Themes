@@ -1,0 +1,22 @@
+[
+{
+    "title": "post image",
+    "variableName": "small_image",
+    "inputFieldHeight": 22,
+    "exampleText": "文章标题小图",
+    "isThemeExtension": 0
+},
+{
+    "title": "post icon",
+    "variableName": "icon",
+    "inputFieldHeight": 46,
+    "exampleText": "book;game;note;chat;code;image;web;link;design;lock",
+    "isThemeExtension": 0
+},
+{
+    "title": "post colour",
+    "variableName": "colour",
+    "inputFieldHeight": 46,
+    "exampleText": "grey;deepgrey;blue;purple;green;yellow;red;orange",
+    "isThemeExtension": 0
+}]
