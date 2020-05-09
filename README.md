@@ -33,9 +33,12 @@ Myidea是基于pinghsu模板的MWEB移植模板，拥有pinghsu模板的大部�
 1. 首先下载模板文件到电脑上，并且把文件放到模板文件夹中。
 ps：在Mweb中左侧的文件夹上点击右键，并且选择编辑--在弹出的窗口中选择--在Finder中打开。
 2. 在Mweb中使用（选择）Myidea这个模板。
-3. 在高级设置中---网站扩展中导入import/Site Extension
-4. 在高级设置中---文章扩展中导入import/Document Extension
-5. 在文章中设置，使用相应的变量就可以啦。
+3. 在高级设置中---网站扩展中导入extensions文件夹中的 Site_Extension.json 文件
+4. 在高级设置中---文章扩展中导入extensions文件夹中的 Document_Extension.json 文件
+5. 在Mweb编辑好文章，点击右上角的圆形按钮（文档大纲），在弹出的选项卡中，根据需要的变量
+6. post image： 就直接复制文章内部的连接 （图片&附件 --- Copy按钮）比如：media/15065694615888/15890194011094.jpg
+7. post icon：这个是设置文章列表上预览图的icon的，可选icon（共10个）有提示。
+8. post color：这个是设置文章列表上的预览图的叠加颜色的，根据提示设置。
 
 ```
 网站扩展变量说明：
