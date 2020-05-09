@@ -1,0 +1,80 @@
+<footer id="footer" class="footer" style="background-color: #030501;color: #FFFFFE;">
+  <div class="footer-meta">
+    <div class="footer-container">
+      <!-- 版权说明 -->
+      <div class="meta-item meta-copyright">
+        <div class="meta-copyright-info">
+          <h2 class="meta-title">INFO</h2>
+          <div class="info-text">  
+              <p>Copyright &copy; 2017 <br>
+              <span class="credit">Powered by 
+              <a target="_blank" href="http://zh.mweb.im/">MWeb</a> 
+              </span>
+              <p>Theme Design by <a href="https://www.linpx.com/" target="_blank">Chakhsu</a></p>
+              <p>Migrating to Mweb by <a href="http://metaidea.cn">idken</a></p>
+              </p> 
+          </div>                  
+        </div>
+      </div>  
+      <!-- Categories -->
+      <div class="meta-item meta-comments">
+          <h2 class="meta-title">CATEGORIES</h2>  
+            {% for p in categoriesTree %} 
+            {% if currentLoop.currentIndex < 4 %}
+            <li>
+            <a href="{{ p.url }}">{{ p.name }}&nbsp;({{ p.count }})</a>
+            <p>
+            {% for p2 in p.children %}
+            <a href="{{ p2.url }}">{{ p2.name }}&nbsp;({{ p2.count }})</a>&nbsp;&nbsp;
+            {% /for %}
+            </p>
+            </li>
+            {% /if %}
+            {% /for %} 
+      </div>
+      <!-- 最新文章 -->
+      <div class="meta-item meta-comments">
+          <h2 class="meta-title">RECENT POSTS</h2>
+
+          {% for p in recentPosts %}
+          {% if currentLoop.currentIndex < 5 %}
+         <li>
+           <a href="{{ p.url }}">{{ p.title }}</a><br>
+         </li>
+          {% /if %}
+          {% /for %} 
+
+      </div>
+  </div>
+</div>
+</footer>
+
+<!--评论变量判断 -->
+{% if ext_disqus_shortname.length %}
+<script type="text/javascript">
+    var disqus_shortname = '{{ ext_disqus_shortname }}'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = '{{ ext_disqus_shortname }}'; 
+
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+{% /if %}      
+<!-- 评论end -->
+{{ seqAndFlowChartSupport }}
+{{ mathJaxSupport }}
+{{ siteOther }}
+</body>
+</html>

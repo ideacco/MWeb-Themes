@@ -1,0 +1,30 @@
+
+<script type="text/javascript">isAddSildbar=false;</script>
+<div class="bg-white" gtools_scp_screen_capture_injected="true" data-feedly-mini="yes">
+	<article class="main-content page-page" style="max-width: 700px;padding: 130px 25px 20px" itemscope="" itemtype="http://schema.org/Article">
+		<div class="post-header">
+				<h1 class="post-title itemprop="name headline">{{post.title}}</h1>
+				<div class="post-tags"></div>
+		</div>
+		<div id="post-content" class="post-content" itemprop="articleBody">
+		<div class="entry-content">
+			  	{{ post.content }}
+		</div>
+		</div>	
+	</article>
+</div>
+
+<script type="text/javascript"> 
+(function() {
+    var header = new Headroom(document.querySelector("#header"), {
+        tolerance: 3,
+        offset : 80,
+        classes: {
+          initial: "animated",
+          pinned: "slideDown",
+          unpinned: "slideUp"
+        }
+    });
+    header.init();
+}());
+</script>

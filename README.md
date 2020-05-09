@@ -3,15 +3,15 @@
 
 ---
 ## BMWEB 模板介绍
-### Bread is MWeb-Themes。
+### Bread
 面包是一个Mweb的模板，基于Bootstrap的开源框架搭建，当然，参考了经典博客模板。适合项目文档发布，项目跟进等。
 
-### pinghsu-ken
-pinghsu-ken是基于pinghsu模板的MWEB移植模板。适合项目文档管理，也非常适合做个人博客，并且搭载了开源评论系统hashover。
+### Myidea
+idea是基于pinghsu模板的MWEB移植模板。适合项目文档管理，也非常适合做个人博客，并且搭载了开源评论系统hashover。
 
 ---
 
-pinghsu-ken是基于pinghsu模板的MWEB移植模板，拥有pinghsu模板的大部分功能，包括：
+Myidea是基于pinghsu模板的MWEB移植模板，拥有pinghsu模板的大部分功能，包括：
 
 ```
 1.自定义ICON，支持十种个性化徽标。
@@ -28,7 +28,7 @@ pinghsu-ken是基于pinghsu模板的MWEB移植模板，拥有pinghsu模板的大
 
 1. 首先下载模板文件到电脑上，并且把文件放到模板文件夹中。
 ps：在Mweb中左侧的文件夹上点击右键，并且选择编辑--在弹出的窗口中选择--在Finder中打开。
-2. 在Mweb中使用pinghsu-ken这个模板。
+2. 在Mweb中使用Myidea这个模板。
 3. 在高级设置中---网站扩展中导入import/Site Extension
 4. 在高级设置中---文章扩展中导入import/Document Extension
 5. 在文章中设置，使用相应的变量就可以啦。

@@ -1,0 +1,86 @@
+<!-- archives 开始 -->
+<div class="main-content archive-page clearfix" style="padding-bottom: 80px">
+    <div class="categorys-item">
+		<!-- <h1 class="title">Categories</h1> -->
+{% for c in categoriesTree %}
+	<div class="categorys-title">
+    	<a href="{{ c.url }}">{{ c.name }}</a>
+		<div class="post-lists">
+        {% for p in c.posts %}
+			<div class="post-lists-body">
+				<div class="post-list-item">
+<!-- 自定义颜色 -->
+				
+					<div class="post-list-item-container">
+						<div class="item-label">
+							<div class="item-title">
+							<a href="{{ p.url }}">{{ p.title }}</a>
+
+
+							</div>
+							<div class="item-meta clearfix">
+<!-- 自定义icon -->
+								{% if p.ext_icon.length %} 
+								<div class="item-meta-ico bg-ico-{{ p.ext_icon }}" style="background: url(asset/img/bg-ico.png) no-repeat;background-size: 40px auto;">
+								</div>
+								{% else %}
+		   						<div class="item-meta-ico bg-ico-note" style="background: url(asset/img/bg-ico.png) no-repeat;background-size: 40px auto;">
+		   						</div> 
+								{% /if %}
+								<div class="item-meta-date"> 
+									<time datetime="{{ p.dateGTM }}" pubdate>
+									<span class='year'>{{ p.date }}</span>
+									</time>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			 {% if c.children.@count %} 有子分类 {% /if %}
+
+            {% /for %}
+			{% for c2 in c.children %}
+<!-- 这里可以插入二级目录名字及链接 -->
+
+            {% for p in c2.posts %}
+				<div class="post-list-item">
+<!-- 自定义颜色 -->
+					{% if p.ext_colour.length %} 
+					<div class="post-list-item-container bg-{{ p.ext_colour }}">
+						<div class="item-label bg-{{ p.ext_colour }}">
+							{% else %}
+						<div class="post-list-item-container">
+							<div class="item-label">
+							{% /if %}
+							<div class="item-title">
+							 <a title="{{ p.title }}" href="{{ p.url }}">{{ p.title }}</a>
+							</div>
+							<div class="item-meta clearfix">
+<!-- 自定义icon -->
+								{% if p.ext_icon.length %} 
+								<div class="item-meta-ico bg-ico-{{ p.ext_icon }}" style="background: url(asset/img/bg-ico.png) no-repeat;background-size: 40px auto;">
+								</div>
+								{% else %}
+		   						<div class="item-meta-ico bg-ico-note" style="background: url(asset/img/bg-ico.png) no-repeat;background-size: 40px auto;">
+		   						</div> 
+								{% /if %}
+								<div class="item-meta-date"> 
+									<time datetime="{{ p.dateGTM }}" pubdate>
+									<span class='year'>{{ p.date }}</span>
+									</time>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            {% /for %}
+	      {% /for %}
+			</div>
+		</div>
+	{% /for %}
+	</div>
+</div>
+
+<!-- 导航 -->	
+<!-- <div class="lists-navigator clearfix"></div> -->
